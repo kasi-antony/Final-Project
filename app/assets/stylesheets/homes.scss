@@ -1,0 +1,366 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.main_div {
+    background-color: #FFFBF4;
+    margin-top: -19px;
+    height: 750px;
+    // height: 100%;
+}
+.navbar_div {
+    background-color: white;
+    display: flex;
+    height: 90px;
+    box-shadow: 0 0 2px 2px rgb(220, 218, 218);
+}
+.logo_for_span {
+    color: #fb8719;
+}
+.nav {
+    margin-left: 240px;
+    font-size: 16px;
+    margin-top: 35px;
+}
+.nav a{
+    text-decoration: none;
+    color: #78909c;
+    padding: 20px;
+
+}
+.nav a:hover {
+    color: #1dd3fd;
+}
+
+
+
+.profile_photo {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top : 12px;
+    border-radius: 50%;
+}
+.logo_div {
+    margin-left: 120px;
+    font-size: 30px;
+    margin-top: 25px;
+    font-weight: 800;
+    color: #1dd3fd;
+}
+.content_div {
+    display: flex;
+    margin-top: 70px;
+    margin-left: 120px;
+}
+.catchy_lines {
+    width: 800px;
+    // background: white;
+}
+.content_div .catchy_lines .heading_lines {
+  
+    font-size: 60px;
+    font-weight: 600;
+    word-spacing: 10px;
+}
+.image_content {
+    margin-top: -35px;
+    margin-left: 40px;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: #fb8719;
+}
+.image_content img {
+    width: 430px;
+    height: 430px;
+    margin-left: -50px;
+    // margin-top: 40px;
+}
+.content_lines_div {
+    color: #78909c;
+    width: 650px;
+    font-size: 19px;
+    margin-top: 40px;
+}
+.image_content2 {
+    margin-top: 20px;
+}
+.arrow_img {
+    width: 300px;
+    height: 150px;
+}
+.searchbar {
+    margin-left: 60px;
+    margin-top: -20px;
+}
+.searchbar_name {
+    margin-left: 60px;
+    width: 90px;
+    height: 27px;
+    padding-top: 13px;
+    font-weight: 600;
+    color: #fb8719;
+    box-shadow: 0px 0px 2px 1px rgb(220, 218, 218);
+    text-align: center;
+    background-color: white;
+}
+.searchbar_input {
+    margin-left: 60px;
+    width: 400px;
+    height: 45px;
+    box-shadow: 0 0 2px rgb(220, 218, 218);
+    display: flex;
+}
+.searchbar_input input {
+    flex: 1;
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+.searchbar_input button {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #fb8719;
+    width: 100px;
+    height: 45px;
+    box-shadow: 0 0 2px rgb(220, 218, 218);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.searchbar_input button:hover {
+    background-color: #ff7b00;
+}
+.fa-magnifying-glass {
+    align-self: center;
+    padding: 14px 20px;
+    color: #78909c;
+    background-color: white;
+    box-shadow: 0 0 2px rgb(220, 218, 218);
+    // border-right: 1px solid rgb(220, 218, 218);
+}
+.searchbar_input input::placeholder {
+    font-size: 16px;
+    color: #78909c;
+}
+.users_div {
+    display: flex;
+}
+.users_content_div {
+    font-size: 50px;
+    font-weight: 800;
+    margin-top: 50px;
+}
+.looking {
+    margin-left: 10px;
+    color: #1dd3fd;
+}
+.for {
+    color: #fb8719;
+}
+.users_content {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    width: 900px;
+    font-weight: 500;
+    color: #78909c;
+}
+
+
+
+
+
+// SIGNUP PAGE
+.main_div_for_signup{
+    background-color: #FFFBF4;
+    margin-top: -19px;
+    height: 754px;
+}
+.circle_div {
+    position: absolute;
+    position: fixed;
+    top: -100px;
+    left: 1200px;
+    width: 400px;
+    height: 400px;
+    background-color: #F8C471;
+    border-radius: 100%;
+}
+.circle_div2 {
+    position: absolute;
+    top: 430px;
+    left: -55px;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background-color: #1dd3fd;
+    border-radius: 100%;
+}
+.signup_main {
+    position: absolute;
+    top: 50px;
+    width: 1300px;
+    height: 650px;
+    margin-left: 100px;
+    background-color: rgba(225, 225, 225, 0.521);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    // box-shadow: 5px 5px 5px grey, -5px -5px 10px grey inset, 10px 10px 10px white inset;
+    box-shadow: 0 0 2px rgb(220, 218, 218);
+    display: flex;
+    // background-color: black; 
+}
+.signup_content {
+    position: relative;
+    width: 450px;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 8px;
+    // box-shadow: 5px 5px 5px grey, -5px -5px 10px grey inset, 10px 10px 10px white inset;
+    box-shadow: 0 0 2px rgb(220, 218, 218);
+    background-color: white;
+}
+#logo_div {
+    margin-top: 70px;
+    // background-color: yellow;
+    width: 600px;
+    font-size: 70px;
+}
+.signup_heading {
+    text-align: center;
+    // margin-left: 170px;
+    margin-top: 50px;
+}
+.input {
+    width: 370px;
+    height: 43px;
+    // background-color: #F8C471;
+    margin-top: 40px;
+    margin-left: 40px;
+    border-bottom: 2px solid #6d828d;
+}
+.input:hover {
+    border-bottom: 2px solid #F8C471;
+}
+.input:focus {
+    border-bottom: 2px solid #F8C471;
+}
+.input input {
+    width: 300px;
+    height: 35px;
+    margin-top: 5px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    padding-left: 10px;
+}
+.input input::placeholder {
+    color: #6d828d;
+    font-size: 18px;
+}
+.input i {
+    font-size: 18px;
+    color: #78909c;
+}
+.submit_button {
+    margin-top: 50px;
+    margin-left: 140px;
+}
+.sub {
+    width: 170px;
+    height: 38px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    outline: none;
+    background-color: #fb8719;
+    border-radius: 8px;
+}
+.sub:hover {
+    background-color:  #ff7b00;
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+}
+.have_an_account {
+    margin-left: 179px;
+}
+.have_an_account a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: 2px solid #ff7b00;
+    transition: 0.1s ease-in-out;
+    color: #ff7b00;
+}
+.have_an_account a:hover {
+    background-color: #ff7b00;
+    color: white;
+}
+.logo_content {
+    font-size: 18px;
+    width: 400px;
+    margin-top: 70px;
+    margin-left: 40px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+.logo_content h1 {
+    margin-bottom: 20px;
+}
+
+// login page
+.login_content{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 8px;
+    // box-shadow: 5px 5px 5px grey, -5px -5px 10px grey inset, 10px 10px 10px white inset;
+    box-shadow: 0 0 2px rgb(220, 218, 218);
+    background-color: white; 
+}
+.circle_div_up_in_login_page{
+    position: absolute;
+    position: fixed;
+    top: -100px;
+    left: 1200px;
+    width: 400px;
+    height: 400px;
+    background-color: #1dd3fd;
+    border-radius: 100%;
+}
+.circle_div_down_in_login_page{
+    position: absolute;
+    top: 430px;
+    left: -55px;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background-color: #F8C471;
+    border-radius: 100%;
+}
+.login_heading{
+    text-align: center;
+    // margin-left: 170px;
+    margin-top: 100px;
+}
+.form_feilds{
+    margin-top: 10px;
+}
