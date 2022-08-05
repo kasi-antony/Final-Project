@@ -1,0 +1,40 @@
+<div class="main_div_for_add_jobs">
+    <div class="navbar_div">
+        <div class="logo_div">
+            LOOKING <span class="logo_for_span">FOR</span>
+        </div>
+        <div class="nav">
+           <span class="jobs_span"><a href="">Jobs</a></span>
+           <span class="recruiters_span"><a href="">Applications</a></span> 
+           <span class="companies_span"><a href="">Messaging</a></span> 
+           <span class="services_span"><a href="">Interviews</a></span> 
+        </div>
+        <div class="profile_photo">
+        <%= image_tag('profile_image.png',class: "profile_photo") %>
+    </div>
+    </div>
+ <div class="input_div">   
+<form action="/manager_add_job" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <div class="main_input_field">
+    <div class="input_field input_field_1">
+    <input type="text" name="job_list[hiring_manager_name]" id="" placeholder="Name" required>
+    <input type="text" name="job_list[eligibility]" id="" placeholder="Experience" required>
+</div>
+<div class="input_field input_field_2">
+    <input type="text" name="job_list[job_title]" id="" placeholder="Job title" required>
+    <input type="text" name="job_list[company_name]" id="" placeholder="Company" required>
+    </div>
+    <div class="input_field input_field_3">
+    <input type="text" name="job_list[qualification]" id="" placeholder="Qualification" required>
+    <input type="text" name="job_list[country]" id="" placeholder="Country" required>
+</div>
+<div class="input_field input_field_4">
+    <textarea type="text" name="job_list[about_job]" id="" placeholder="About job" required></textarea>
+</div>
+<div class="input_field_submit">
+    <input type="submit" value="Add Job">
+</div>    
+</form>
+</div>
+</div>

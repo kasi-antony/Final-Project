@@ -8,8 +8,9 @@
 }
 .main_div {
     background-color: #FFFBF4;
-    margin-top: -19px;
+    margin-top: 3%;
     height: 750px;
+    position: fixed;
     // height: 100%;
 }
 .navbar_div {
@@ -22,7 +23,7 @@
     color: #fb8719;
 }
 .nav {
-    margin-left: 240px;
+    // margin-left: 20px;
     font-size: 16px;
     margin-top: 35px;
 }
@@ -46,11 +47,13 @@
     border-radius: 50%;
 }
 .logo_div {
+    position: relative;
     margin-left: 120px;
     font-size: 30px;
     margin-top: 25px;
     font-weight: 800;
     color: #1dd3fd;
+    z-index: 5;
 }
 .content_div {
     display: flex;
@@ -232,16 +235,20 @@
     background-color: white;
 }
 #logo_div {
-    margin-top: 70px;
+    margin-top: 90px;
     // background-color: yellow;
     width: 600px;
     font-size: 70px;
+    left: -50px;
 }
 .signup_heading {
     text-align: center;
     // margin-left: 170px;
     margin-top: 50px;
 }
+.flash-error {
+    color: red;
+  }
 .input {
     width: 370px;
     height: 43px;
@@ -263,7 +270,7 @@
     font-size: 18px;
     border: none;
     outline: none;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     padding-left: 10px;
 }
 .input input::placeholder {
@@ -295,7 +302,7 @@
     transition: ease-in-out 0.1s;
 }
 .have_an_account {
-    margin-left: 179px;
+    margin-left: 33%;
 }
 .have_an_account a {
     text-decoration: none;
@@ -315,8 +322,8 @@
     font-size: 18px;
     width: 400px;
     margin-top: 70px;
-    margin-left: 40px;
-    color: black;
+    margin-left: 60px;
+    color: white;
     font-weight: 500;
     text-align: center;
 }
@@ -363,4 +370,94 @@
 }
 .form_feilds{
     margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//SIGN_UP
+
+#main_div_for_signup {
+    position: fixed;
+}
+.form-box {
+    width: 1300px;
+    height: 650px;
+    position: relative;
+    display: flex;
+    background: white;
+    margin: 4% 9%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+}
+.form_image{
+    position: absolute;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0, 0, 0, 0.8)),url(interview.jpg);
+    width: 50%;
+    height: 100%;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+.button_box {
+    width: 420px;
+    height: 40px;
+    margin: 35px auto;
+    position: relative;
+    border: 3px solid transparent;
+    // box-shadow: 0 0 2px 2px black;
+}
+.form-box-1 {
+    margin-left: 5%;
+}
+.toggle_button {
+    cursor: pointer;
+    // position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 160px;
+    height: 40px;
+    // bottom: 2px;
+    // padding: 10px 30px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    // border-bottom: 3px solid transparent;
+    transition: 0.4s ease-in-out;
+}
+#button_box_1{
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 150px;
+    height: 100%;
+    border-bottom: 3px solid #fb8719;
+    transition: all 0.3s;
+}
+.interviewee_signup_page {
+    position: absolute;
+    transition: all 0.5s;
+    left: 55%;
+}
+.Manager_signup_page {
+    position: absolute;
+    left: 100%;
+    transition: all 0.5s;
+}
+#button_2 {
+    font-size: 1rem;
+    color: #a9a9a9;
+    font-weight: 500;
+    // border-left: 2px solid #a9a9a9;
 }

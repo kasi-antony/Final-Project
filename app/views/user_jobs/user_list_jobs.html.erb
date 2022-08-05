@@ -1,0 +1,34 @@
+<div class="navbar_div">
+    <div class="logo_div">
+        LOOKING <span class="logo_for_span">FOR</span>
+    </div>
+    <div class="nav">
+       <span class="jobs_span"><a href="">Jobs</a></span>
+       <span class="recruiters_span"><a href="">Applications</a></span> 
+       <span class="companies_span"><a href="">Interviews</a></span> 
+       <span class="services_span"><a href="">Logout</a></span> 
+    </div>
+    
+</div>
+ <div class="all_jobs_div">
+<% Job.all.each do |job| %>
+<div class="job_list_div">
+    <div class="role_and_name_div">
+  <div class="role_div">
+    <h2>Role: <%= job.job_title%></h2>
+  </div>
+  <div class="hiring_manager_div">
+    <h2>Hiring Manager: <%= job.hiring_manager_name %></h2>
+  </div>
+</div>
+<div class="company_and_button_div">
+    <div class="company_div">
+        <h2>Company: <%= job.company_name %></h2>
+    </div>
+    <div class="view_button_div">
+        <h2><a href="/user_jobs/<%=job.id%>">View Job</a></h2>
+    </div>
+</div>
+</div>
+</div>
+<% end %>

@@ -1,0 +1,123 @@
+<div class="main_div_for_signup" id="main_div_for_signup">
+    <div class="circle_div"></div>
+    <div class="circle_div2"></div>
+    
+    <div class="form-box">
+        <div class="logo_div" id="logo_div">
+            LOOKING <span class="logo_for_span" id="logo_for_span">FOR</span>
+            <div class="logo_content">
+                <h1>Welcome Back!</h1>
+                To keep connected with us please login with your personal info
+            </div>
+            <div class="have_an_account">
+                    <a href="/homes/login">Sign in</a>
+                </div>
+        </div>
+        <div class="form_image">
+            <!-- <%= image_tag('interview.jpg',class: "interview_image") %> -->
+        </div>
+        <div class="form-box-1"> 
+    <div class="button_box">
+        <div id="button_box_1"></div>
+        <button type="button" class="toggle_button" id="button_1" onclick="interviewee()">INTERVIEWEE</button>
+        <button type="button" class="toggle_button" id="button_2" onclick="manager()">MANAGER</button>
+    </div>
+    <div class="interviewee_signup_page" id="interviewee">
+        <form action="/homes/create" method="post">
+
+            <input
+  type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>"
+/>
+<% if flash[:error]%><p class = "flash-error"><%= flash[:error]%></p><%end%>
+            <div class="input">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name" name="user[name]">
+                </div>
+                <div class="input">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" placeholder="Contact" name="user[contact_number]">
+                    </div>
+                    <div class="input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="user[email]">
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" name="user[password]" >
+                            </div>
+                            <div class="submit_button">
+                                <button class="sub" type="submit">continue</button>
+                            </div>
+        </form>
+        
+    </div>
+    <div class="Manager_signup_page" id="manager">
+        <form action="/homes/create" method="post">
+
+            <input
+  type="hidden"
+  name="authenticity_token"
+  value="<%= form_authenticity_token %>"/>
+<% if flash[:error]%><p class = "flash-error"><%= flash[:error]%></p><%end%>
+            <div class="input">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name" name="user[name]">
+                </div>
+                <div class="input">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" placeholder="Contact" name="user[contact_number]">
+                    </div>
+                    <div class="input">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" name="user[email]">
+                        </div>
+                        <div class="input">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Password" name="user[password]" >
+                            </div>
+                            <div class="submit_button">
+                                <button class="sub" type="submit">continue</button>
+                            </div>
+        </form>
+        
+    </div>
+</div>
+    </div>
+</div>
+
+
+<script>
+    var x = document.getElementById("interviewee");
+    var y = document.getElementById("manager");
+    var z = document.getElementById("button_box_1");
+    var a = document.getElementById("button_2");
+    var b = document.getElementById("button_1");
+
+    function manager(){
+        x.style.left = "0";
+        y.style.left = "55%";
+        z.style.left = "190px";
+        z.style.width = "110px";
+        a.style.fontSize = "1.3rem";
+        a.style.fontWeight = "600";
+        a.style.color = "black";
+        b.style.fontSize = "1rem";
+        b.style.fontWeight = "500";
+        b.style.color = "#a9a9a9";
+    }
+    function interviewee(){
+        x.style.left = "55%";
+        y.style.left = "100%";
+        z.style.left = "8px";
+        z.style.width = "150px";
+        a.style.fontSize = "1rem";
+        a.style.fontWeight = "500";
+        a.style.color = "#a9a9a9";
+        b.style.fontSize = "1.3rem";
+        b.style.fontWeight = "600";
+        b.style.color = "black";
+    }
+
+</script>

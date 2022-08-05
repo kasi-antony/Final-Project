@@ -9,13 +9,19 @@
        <span class="companies_span"><a href="">Companies</a></span> 
        <span class="services_span"><a href="">Services</a></span> 
        <span class="more_span"><a href="">More</a></span>
+       <% unless @current_user %>
+         <span><a href="/homes/login"> Sign up </a></span>
+         <% else %>
+         <span><a href="#"> <%= @current_user.name if @current_user %> </a></span>
+       <% end %>
+       
     </div>
-    <div class="profile_photo">
+    <%# <div class="profile_photo">
     <%= image_tag('profile_image.png',class: "profile_photo") %>
-</div>
+<%# </div> %>
 </div>
 <div class="content_div">
-    <div class="catchy_lines">
+    <div class="catchy_lines"> 
         <div class="heading_lines">
             BEST WAY TO FIND A PERFECT JOB
         </div>
