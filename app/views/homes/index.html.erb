@@ -4,15 +4,15 @@
         LOOKING <span class="logo_for_span">FOR</span>
     </div>
     <div class="nav">
-       <span class="jobs_span"><a href="">Jobs</a></span>
+       <span class="jobs_span"><a href="/user_jobs/user_list_jobs">Jobs</a></span>
        <span class="recruiters_span"><a href="">Recruiters</a></span> 
        <span class="companies_span"><a href="">Companies</a></span> 
        <span class="services_span"><a href="">Services</a></span> 
        <span class="more_span"><a href="">More</a></span>
        <% unless @current_user %>
-         <span><a href="/homes/login"> Sign up </a></span>
+         <span><a href="/users/login"> Sign up </a></span>
          <% else %>
-         <span><a href="#"> <%= @current_user.name if @current_user %> </a></span>
+         <span><%= @current_user.name if @current_user %></span>
        <% end %>
        
     </div>

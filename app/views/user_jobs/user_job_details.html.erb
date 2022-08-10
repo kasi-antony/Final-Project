@@ -6,51 +6,75 @@
 </div>
 <div class="job_details">
     <div class="job_details_main_content_1">
+        <div>
     <div class="job_details_content">
         <span class="job_details_title">
-            <h3>Job Title: </h3>
+            <h3>Manager Name: </h3>
         </span>
-        <span>
+        <span class="job_details_ans">
+            <%= @job.hiring_manager_name %>
+        </span>
+    </div>
+    <div class="job_details_content">
+        <span class="job_details_title">
+            <h3>Job title: </h3>
+        </span>
+        <span class="job_details_ans">
             <%= @job.job_title %>
-        </span>
-    </div>
-    <div class="job_details_content">
-        <span class="job_details_title">
-            <h3>Company: </h3>
-        </span>
-        <span>
-            <%= @job.company_name %>
-        </span>
-    </div>
-    <div class="job_details_content">
-        <span class="job_details_title">
-            <h3>About Job: </h3>
-        </span>
-        <span>
-            <%= @job.about_job %>
         </span>
     </div>
     <div class="job_details_content">
         <span class="job_details_title">
             <h3>Qualification: </h3>
         </span>
-        <span>
+        <span class="job_details_ans">
             <%= @job.qualification %>
         </span>
     </div>
+</div>
+<div class="job_details_contnet_coloum2">
     <div class="job_details_content">
         <span class="job_details_title">
             <h3>Experience: </h3>
         </span>
-        <span>
+        <span class="job_details_ans">
             <%= @job.eligibility %>
         </span>
     </div>
+    <div class="job_details_content">
+        <span class="job_details_title">
+            <h3>Company: </h3>
+        </span>
+        <span class="job_details_ans">
+            <%= @job.company_name %>
+        </span>
+    </div>
+    <div class="job_details_content">
+        <span class="job_details_title">
+            <h3>Country: </h3>
+        </span>
+        <span class="job_details_ans">
+            <%= @job.country %>
+        </span>
+    </div>
+</div>
+    </div>
+    
+
+    <div>
+        <div  class="job_details_heading_content">
+            <h3>About Job</h3>
+        </div>
+        <div class="job_details_about_job">
+            <div>
+                <p>
+            <%= @job.about_job %>
+                </p>
+        </div>
+        </div>
     </div>
     <div class="job_apply_button">
         <a href="">Apply</a>
     </div>
-
-
 </div>
 

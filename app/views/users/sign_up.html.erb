@@ -10,7 +10,7 @@
                 To keep connected with us please login with your personal info
             </div>
             <div class="have_an_account">
-                    <a href="/homes/login">Sign in</a>
+                    <a href="/users/login">Sign in</a>
                 </div>
         </div>
         <div class="form_image">
@@ -23,7 +23,7 @@
         <button type="button" class="toggle_button" id="button_2" onclick="manager()">MANAGER</button>
     </div>
     <div class="interviewee_signup_page" id="interviewee">
-        <form action="/homes/create" method="post">
+        <form action="/users/create" method="post">
 
             <input
   type="hidden"
@@ -33,19 +33,19 @@
 <% if flash[:error]%><p class = "flash-error"><%= flash[:error]%></p><%end%>
             <div class="input">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Name" name="user[name]">
+                <input type="text" placeholder="Name" name="interviewer[name]">
                 </div>
                 <div class="input">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" placeholder="Contact" name="user[contact_number]">
+                    <input type="text" placeholder="Contact" name="interviewer[contact_number]">
                     </div>
                     <div class="input">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email" name="user[email]">
+                        <input type="email" placeholder="Email" name="interviewer[email]">
                         </div>
                         <div class="input">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" placeholder="Password" name="user[password]" >
+                            <input type="password" placeholder="Password" name="interviewer[password]" >
                             </div>
                             <div class="submit_button">
                                 <button class="sub" type="submit">continue</button>
@@ -54,7 +54,7 @@
         
     </div>
     <div class="Manager_signup_page" id="manager">
-        <form action="/homes/create" method="post">
+        <form action="/users/create" method="post">
 
             <input
   type="hidden"
@@ -63,19 +63,19 @@
 <% if flash[:error]%><p class = "flash-error"><%= flash[:error]%></p><%end%>
             <div class="input">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Name" name="user[name]">
+                <input type="text" placeholder="Name" name="manager[name]">
                 </div>
                 <div class="input">
                     <i class="fa-solid fa-phone"></i>
-                    <input type="text" placeholder="Contact" name="user[contact_number]">
+                    <input type="text" placeholder="Contact" name="manager[contact_number]">
                     </div>
                     <div class="input">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="Email" name="user[email]">
+                        <input type="email" placeholder="Email" name="manager[email]">
                         </div>
                         <div class="input">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="password" placeholder="Password" name="user[password]" >
+                            <input type="password" placeholder="Password" name="manager[password]" >
                             </div>
                             <div class="submit_button">
                                 <button class="sub" type="submit">continue</button>

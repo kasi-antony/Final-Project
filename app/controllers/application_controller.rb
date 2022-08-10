@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
     before_action :ensure_user_logged_in
+    add_flash_types :warning,:danger,:success
 
     def ensure_user_logged_in
         unless current_user
