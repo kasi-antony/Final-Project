@@ -3,8 +3,13 @@
         LOOKING <span class="logo_for_span">FOR</span>
     </div>
     <div class="search_filter_div">
-    <form action="">
-      <input type="search" name="" id="">
+    <form action="/search" method="get">
+      <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>"
+      />
+      <input type="search" name="search" id="">
       <input type="submit" name="" id="">
     </form>
   </div>
@@ -16,6 +21,65 @@
     </div>
     
 </div>
+
+<div class="all_jobs_div">
+  <% if @@presence_value==0%> <% Job.all.each do |job| %>
+  <div class="job_list_div">
+    <div class="role_and_name_div">
+  <div class="role_div">
+    <h2>Role: <%= job.job_title%></h2>
+  </div>
+  <div class="hiring_manager_div">
+    <h2>Hiring Manager: <%= job.hiring_manager_name %></h2>
+  </div>
+</div>
+<div class="company_and_button_div">
+    <div class="company_div">
+        <h2>Company: <%= job.company_name %></h2>
+    </div>
+    <div class="view_button_div">
+        <h2><a href="/user_jobs/<%=job.id%>">View Job</a></h2>
+    </div>
+</div>
+</div>
+  <% end %> 
+  <% elsif @@presence_value==1 and @search_params !=[]%> 
+  <% Job.all.each do |job| %> <% if @search_params.include? job.id %>
+  <div class="job_list_div">
+    <div class="role_and_name_div">
+  <div class="role_div">
+    <h2>Role: <%= job.job_title%></h2>
+  </div>
+  <div class="hiring_manager_div">
+    <h2>Hiring Manager: <%= job.hiring_manager_name %></h2>
+  </div>
+</div>
+<div class="company_and_button_div">
+    <div class="company_div">
+        <h2>Company: <%= job.company_name %></h2>
+    </div>
+    <div class="view_button_div">
+        <h2><a href="/user_jobs/<%=job.id%>">View Job</a></h2>
+    </div>
+</div>
+</div>
+  <% end %>
+<% end %> <% elsif @search_params==[] and @@presence_value==1 %>
+<div class="no_result_error">No Results Found</div>
+<%end%>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
  <div class="all_jobs_div">
 <% Job.all.each do |job| %>
 <div class="job_list_div">

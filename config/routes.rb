@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   match 'users/create', :to => 'users#create', :via => :post
   match 'user/login', :to => 'sessions#login', :via => :post
   match '/manager_add_job', :to => 'manager_jobs#manager_add_job', :via => :post
+  match '/search', to: "user_jobs#search", :via => :get
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

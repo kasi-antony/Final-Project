@@ -5,9 +5,9 @@ class UserJobsController < ApplicationController
  @@presence_value = 0
 
  def search
-    @parameter = params[:serach]
+    @parameter = params[:search]
     @@array=[]
-    @results = Job.where("company_name LIKE?", "%" +@parameter + "%")
+    @results = Job.where("company_name LIKE?", "%" +@parameter +"%")
     @@presence_value = 1
     @results.each do |result|
         @@array.push(result.id)
@@ -17,7 +17,7 @@ class UserJobsController < ApplicationController
  end
 
  def array_returner
-    return @@return
+    return @@array
  end
 def presence_value_returner
     return @@presence_value
@@ -43,7 +43,7 @@ end
       @@presence_value = 0
 
     end
-    
+
     def job_id
         @@job_id = params[:id]
         redirect_to "/user_jobs/user_job_details"
