@@ -23,7 +23,7 @@
 </div>
 
 <div class="all_jobs_div">
-  <% if @@presence_value==0%> <% Job.all.each do |job| %>
+  <% if @presence_value==0%> <% Job.all.each do |job| %>
   <div class="job_list_div">
     <div class="role_and_name_div">
   <div class="role_div">
@@ -42,9 +42,8 @@
     </div>
 </div>
 </div>
-  <% end %> 
-  <% elsif @@presence_value==1 and @search_params !=[]%> 
-  <% Job.all.each do |job| %> <% if @search_params.include? job.id %>
+  <% end %> <% elsif @presence_value==1 and @search_params !=[]%> <% 
+  Job.all.each do |job| %> <% if @search_params.include? job.id %>
   <div class="job_list_div">
     <div class="role_and_name_div">
   <div class="role_div">
@@ -64,7 +63,7 @@
 </div>
 </div>
   <% end %>
-<% end %> <% elsif @search_params==[] and @@presence_value==1 %>
+<% end %> <% elsif @search_params==[] and @presence_value==1 %>
 <div class="no_result_error">No Results Found</div>
 <%end%>
 </div>
@@ -80,7 +79,7 @@
 
 
 
- <div class="all_jobs_div">
+ <!-- <div class="all_jobs_div">
 <% Job.all.each do |job| %>
 <div class="job_list_div">
     <div class="role_and_name_div">
@@ -101,4 +100,4 @@
 </div>
 </div>
 </div>
-<% end %>
+<% end %> -->
