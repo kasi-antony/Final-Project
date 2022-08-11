@@ -26,11 +26,14 @@
 <% else %>
 
         <%# Need to give Add Job Icon %>
-
-    <div class="input_div">   
+        <div class="main_manager_job_list_div">
+    <div class="manager_list_job_div">  
+        <div>
         <% @jobs.each do |job| %>
             <%= job.hiring_manager_name %>
             <%= job.job_title %>
         <% end %>
     </div>
+    </div>
+</div>
 <% end %>
