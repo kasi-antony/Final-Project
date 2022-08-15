@@ -6,14 +6,15 @@
    
        
     <div class="nav">
+       <span class="jobs_span"><a href="/user_jobs/user_list_jobs">Home</a></span>
        <span class="jobs_span"><a href="/user_jobs/user_list_jobs">Jobs</a></span>
        <span class="recruiters_span"><a href="">Applications</a></span> 
        <span class="companies_span"><a href="">Interviews</a></span> 
-       <span class="services_span"><a href="/user/logout">Logout</a></span> 
        <% unless @current_user %>
          <span><a href="/homes/login"> Sign up </a></span>
          <% else %>
          <span class="profile_img"><%= @current_user.name if @current_user %></span>
+         <span class="services_span"><a href="/user/logout">Logout</a></span> 
        <% end %>
     </div>
 </div>
@@ -34,7 +35,7 @@
 
 
 
-
+<%# 
 <div class="searchbar">
     <div class="searchbar_name">Company</div>
     <div class="searchbar_input">
@@ -42,7 +43,7 @@
     <input type="search" placeholder="Company name">
     <button>Search</button>
 </div>
-</div>
+</div> %>
 
 
 

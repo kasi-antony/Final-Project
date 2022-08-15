@@ -9,19 +9,24 @@
       name="authenticity_token"
       value="<%= form_authenticity_token %>"
       />
-      <input type="search" name="search" id="">
-      <input type="submit" name="" id="">
+      <input type="search" class="search-div-user-list" name="search" id="">
+      <input type="submit" class="search-button-user-list" name="" id="">
     </form>
   </div>
     <div class="nav">
+      <span class="jobs_span"><a href="/homes/index">Home</a></span>
        <span class="jobs_span"><a href="">Jobs</a></span>
        <span class="recruiters_span"><a href="">Applications</a></span> 
        <span class="companies_span"><a href="">Interviews</a></span> 
-       <span class="services_span"><a href="">Logout</a></span> 
+       <% unless @current_user %>
+         <span><a href="/homes/login"> Sign up </a></span>
+         <% else %>
+         <span class="profile_img"><%= @current_user.name if @current_user %></span>
+       <% end %> 
     </div>
     
 </div>
-
+<!-- 
 <div class="all_jobs_div">
   <% if @presence_value==0%> <% Job.all.each do |job| %>
   <div class="job_list_div">
@@ -66,7 +71,87 @@
 <% end %> <% elsif @search_params==[] and @presence_value==1 %>
 <div class="no_result_error">No Results Found</div>
 <%end%>
+</div> -->
+
+
+
+<div class="all-jobs-div">
+  <% if @presence_value==0%> <% Job.all.each do |job| %>
+  <div class="job-list-div">
+    <div class="job-list-details-div">
+      <div class="job-title-div">
+        <span>We need</span><span class="job-title-span"> <%= job.job_title%></span>
+      </div>
+      <div class="list-job company-name-title">
+        <%= job.company_name %>
+      </div>
+      <div class="list-job about-job-div">
+        <p>
+          <%= job.about_job %>
+        </p>
+      </div>
+      <div class="list-job job-list-line">
+        <hr>
+      </div>
+      <div class="job-list-manager-name-and-more">
+        <div class="job-list-manager-name-div">
+          <span class="job-list-manager">
+              <h3>Manager Name: </h3>
+          </span>
+          <span class="job-list-manager-name">
+            <%= job.hiring_manager_name %>
+          </span>
+        </div>
+        <div class="job-list-view-more">
+          <a href="/user_jobs/<%=job.id%>">
+          <button class="btn1">MORE DETAILS</button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% elsif @presence_value==1 and @search_params !=[]%> <% 
+  Job.all.each do |job| %> <% if @search_params.include? job.id %>
+  <div class="job-list-div">
+    <div class="job-list-details-div">
+      <div class="job-title-div">
+        <span>We need</span><span class="job-title-span"> <%= job.job_title%></span>
+      </div>
+      <div class="list-job company-name-title">
+        <%= job.company_name %>
+      </div>
+      <div class="list-job about-job-div">
+        <p>
+          <%= job.about_job %>
+        </p>
+      </div>
+      <div class="list-job job-list-line">
+        <hr>
+      </div>
+      <div class="job-list-manager-name-and-more">
+        <div class="job-list-manager-name-div">
+          <span class="job-list-manager">
+              <h3>Manager Name: </h3>
+          </span>
+          <span class="job-list-manager-name">
+            <%= job.hiring_manager_name %>
+          </span>
+        </div>
+        <div class="job-list-view-more">
+          <a href="/user_jobs/<%=job.id%>">MORE DETAILS</a>
+        </div>
+      </div>
+    </div>
 </div>
+  <% end %>
+<% end %> <% elsif @search_params==[] and @presence_value==1 %>
+<div class="no_result_error">No Results Found</div>
+<%end%>
+  
+</div>
+
+
 
 
 
