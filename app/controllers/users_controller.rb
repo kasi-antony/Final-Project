@@ -25,24 +25,18 @@ class UsersController < ApplicationController
     @manager = User.new
   end
 
-  
-
   def user_login
     user = User.find_by(email: params[:user][:email])
     if user&.authenticate(params[:user][:password])
       session[:current_user_id] = user.id
-      if user.role == "manager"
+      if user.role == 'manager'
         redirect_to '/manager_jobs/manager_home_page', success: "You have been logged in as #{user.name}"
-      elsif
-        redirect_to '/homes/index', success: "You have been logged in as #{user.name}"
+        # redirect_to '/users/login', danger: 'Invalid credentials...!'
+        render plain: 'failed'
+      end
     else
-      # redirect_to '/users/login', danger: 'Invalid credentials...!'
-      render plain: "failed"
+      render plain: 'failed'
     end
-    else 
-      render plain: "failed"
-  end
-
   end
 
   def logout

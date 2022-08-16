@@ -3,14 +3,18 @@
         LOOKING <span class="logo_for_span">FOR</span>
     </div>
     <div class="nav">
-       <span class="jobs_span"><a href="/manager_jobs/add_jobs">Jobs</a></span>
+       <span class="jobs_span"><a href="/manager_jobs/add_jobs">Home</a></span>
        <span class="recruiters_span"><a href="">Applications</a></span> 
        <span class="companies_span"><a href="">Interviews</a></span> 
-       <span class="services_span"><a href="/user/logout">Logout</a></span> 
        <% unless @current_user %>
          <span><a href="/homes/login"> Sign up </a></span>
          <% else %>
-         <span class="profile_img"><%= @current_user.name if @current_user %></span>
+         <div class="manager-user-name-div">
+            <button class="manager-user-name"><%= @current_user.name if @current_user %></button>
+            <div class="logout-div">
+                <a href="/user/logout">Logout</a>
+            </div>
+          </div>
        <% end %>
     </div>
     

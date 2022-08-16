@@ -63,8 +63,6 @@ body {
 //     justify-content: center;
 //     align-items: center;
 // }
-
-
 .all-jobs-div{
     margin-top: 6%;
     padding-top: 1.5%;
@@ -423,17 +421,40 @@ body {
 }
 
 .search-div-user-list {
-    position: relative;
-    margin-top: 8%;
+    position: absolute;
     margin-left: 2%;
     width: 200px;
     height: 30px;
+    padding-left: 8px;
+    outline: none;
+    border-radius: 20px 0 0 20px;
+    border: 2px solid #16badf;
 }
 .search-button-user-list {
     position: absolute;
-
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border: 2px solid #16badf;
+    color: white;
+    font-weight: 600;
+    border-left: none;
+    background: #fb8719;
+    margin-left: 190px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
 }
-
+.browse-jobs {
+    position: relative;
+    top: 6%;
+}
+.browse-jobs button {
+    width: 300px;
+    height: 60px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
 
 
 

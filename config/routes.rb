@@ -16,7 +16,6 @@ Rails.application.routes.draw do
   get '/user/logout', to: 'users#logout'
   root 'users#sign_up'
 
-
   match 'users/create', to: 'users#create', via: :post
   # match 'user/login', to: 'sessions#login', via: :post
   match '/manager_add_job', to: 'manager_jobs#manager_add_job', via: :post
