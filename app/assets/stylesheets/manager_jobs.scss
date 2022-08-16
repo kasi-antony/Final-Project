@@ -1,15 +1,385 @@
 // Place all the styles related to the manager_jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.manager-home-page-div {
+    position: relative;
+    display: flex;
+    top: 110px;
+}
+.jobs_span a{
+    color: #1dd3fd;
+}
+
 .about_manager_div{
-    background-color: rgba(218, 173, 173, 0.659);
-    width: 800px;
-    height: 400px;
+    background-color: #ffff;
+    position: relative;
+    box-shadow: 3px 3px 6px #e8e8e8,
+    -3px -3px 6px rgb(246, 246, 246);
+    width: 430px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
     border-radius: 25px;
-    margin-top: 100px;
-    margin-left: 350px;
 
 }
+.manager-adding-job {
+    background-color: #ffff;
+    position: relative;
+    box-shadow: 3px 3px 6px #e8e8e8,
+    -3px -3px 6px rgb(246, 246, 246);
+    width: 700px;
+    height: 1080px;
+    display: flex;
+    margin-bottom: 2%;
+    flex-direction: column;
+    left: 14%;
+    border-radius: 25px;
+}
+.manager-profile {
+    font-size: 0.8rem;
+    color: #afb8bd;
+    font-weight: 600;
+    margin-top: 7%;
+    letter-spacing: 1px;
+}
+.manager-profile-span {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+    margin-left: 1%;
+    letter-spacing: 1px;
+}
+
+.profile-img-div {
+    position: absolute;
+    top: 6%;
+    left: 8.3%;
+}
+.profile-content-div {
+    position: relative;
+    top: 63%;
+    left: 10%;
+}
+.profile-img {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 17px;
+}
+
+.manager-job-input-div {
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 980px;
+    top: 5%;
+    left: 5%;
+    flex-direction: column;
+}
+.manager-job-input-div .input-field-manager-adding-job {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    background: #F4F6F7;
+    margin-bottom: 7%;
+}
+.about-job {
+    width: 97.2%;
+    height: 150px;
+    position: relative;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    background: #F4F6F7;
+    font-size: 1.3rem;
+    padding-top: 18px;
+    padding-left: 18px;
+    resize: none;
+}
+.manager-job-input-div .input-field-manager-adding-job input {
+    width: 90%;
+    height: 100%;
+    font-size: 1.5rem;
+    margin-left: 2.4%;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+
+
+
+.manager-home-page-div1 {
+    position: relative;
+    display: flex;
+    top: 150px;
+}
+
+
+.about_manager_div1{
+    background-color: #ffff;
+    position: relative;
+    box-shadow: 3px 3px 6px #e8e8e8,
+    -3px -3px 6px rgb(246, 246, 246);
+    width: 1130px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    left: 10%;
+    border-radius: 25px;
+}
+.profile-img1 {
+    position: relative;
+    width: 390px;
+    height: 390px;
+    border-radius: 17px;
+    top: 7%;
+    left: 14%;
+}
+
+.profile-content-div1 {
+    position: relative;
+    left: 14%;
+}
+
+.manager-profile1 {
+    font-size: 1rem;
+    color: #afb8bd;
+    font-weight: 600;
+    margin-top: 20%;
+    letter-spacing: 1px;
+}
+.manager-profile-span1 {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 600;
+    margin-left: 1%;
+    letter-spacing: 1px;
+}
+.manager-adding-job-icon{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    border-radius: 50%;
+    font-size: 3rem;
+    color: #fff;
+    display: flex;
+    border: none;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background: #fb8719;
+    top: 75%;
+    left: 84%;
+    cursor: pointer;
+}
+.manager-adding-add-job{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    position: fixed;
+    border-radius: 10%;
+    font-size: 1rem;
+    color: rgb(166, 166, 166);
+    display: flex;
+    visibility: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.129);
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background: rgb(252, 252, 252);
+    top: 85%;
+    left: 87%;
+}
+  .dropdown {
+    position: fixed;
+    display: inline-block;
+    top: 80%;
+    left: 75%;
+    z-index: 1;
+  }
+
+  .manager-user-name-div {
+    position: relative;
+    display: inline-block;
+  }
+  .manager-user-name {
+    font-size: 1.3rem;
+    background: none;
+    border: none;
+    outline: none;
+    color: #78909c;
+    cursor: pointer;
+  }
+  .logout-div {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    display: none;
+    background: white;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 2px 2px rgba(234, 234, 234, 0.499);
+  }
+  .manager-user-name-div:hover .logout-div{
+    display: flex;
+  }
+
+
+  .dropdown:hover .manager-adding-add-job {
+    visibility: visible;
+}
+  
+
+
+.main_manager_job_list_div{
+    position: relative;
+    border-radius: 8px;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    margin-bottom: 4%;
+    top: 240px;
+    left: 10%; 
+    width: 74.5%;
+    height: auto;
+    background-color: white;
+    box-shadow: 3px 3px 6px #e8e8e8,
+    -3px -3px 6px rgb(246, 246, 246);
+    border-radius: 25px;
+}
+.manager_list_job_div {
+    position: relative;
+    width: 88%;
+    height: 120px;
+    top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    left: 5%;
+    border-radius: 15px;
+    background-color: #e8e8e8;
+}
+
+.manager-list {
+    position: relative;
+    top: 12px;
+    left: 18%;
+}
+.job-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.job-name {
+    margin-top: 2%;
+    font-size: 1.2rem;
+}
+.manager-list-delete-button {
+    position: relative;
+    top: 30%;
+    right: 10%;
+}
+.manager-list-delete-button input {
+    width: 160px;
+    height: 50px;
+    border: none;
+    background: #ff6262;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+.manager-list-delete-button input:hover {
+    background: #e15555;
+}
+
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    background: rgba(0, 0, 0, 0.434);
+}
+
+.overlay {
+    position: relative;
+    width: 1300px;
+    height: 635px;
+    top: 8%;
+    left: 6%;
+    background-color: white;
+}
+
+.input-field-manager-adding-job2 input {
+    position: relative;
+    width: 550px;
+    padding-left: 2%;
+    font-size: 1.5rem;
+    height: 80px;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    top: 38px; 
+    left: 4.5%;
+    background: #F4F6F7;
+    margin-top: 0.6%;
+    margin-left: 0.6%;
+}
+.input-field-manager-adding-job-textarea textarea {
+    width: 88.4%;
+    height: 150px;
+    position: relative;
+    border-radius: 16px;
+    left: 5%;
+    border: none;
+    outline: none;
+    background: #F4F6F7;
+    font-size: 1.3rem;
+    padding-top: 18px;
+    padding-left: 18px;
+    margin-top: 4%;
+    resize: none;
+}
+.cross-icon {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    font-size: 1rem;
+}
+.cross-icon i {
+    cursor: pointer;
+}
+.cross-icon i:hover {
+    color: rgb(255, 0, 0);
+}
+
+.logout_span {
+    position: absolute;
+    background: white;
+    width: 110px;
+    height: 50px;
+    display: flex;
+    box-shadow: 0 0 2px 2px rgba(234, 234, 234, 0.641);
+    justify-content: center;
+    align-items: center;
+    left: 70%;
+    top: 80%;
+    display: none;
+}
+
+
 
 //ADD JOBS PAGE
 .navbar_div {
@@ -28,19 +398,17 @@
 }
 .nav a{
     text-decoration: none;
+    font-weight: 600;
     color: #78909c;
     padding: 20px;
+    text-transform: uppercase;
 
 }
 .nav a:hover {
     color: #1dd3fd;
 }
-.profile_photo {
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
-    margin-top : 12px;
-    border-radius: 50%;
+.nav .jobs_span a{
+    color: #1dd3fd;
 }
 .logo_div {
     margin-left: 120px;
@@ -82,18 +450,18 @@
 //     box-shadow: 0 0 2px 2px rgba(205, 205, 205, 0.308);
 //     background-color: #394b6f;
 // }
-.input_field_4 textarea{
-    margin-left: 30px;
-    width: 1040px;
-    height: 130px;
-    font-size: 18px;
-    background: white;
-    border: none;
-    outline: none;
-    padding: 7px 7px;
-    border: 2px solid #e8e8e8;
-    resize: vertical;
-}
+// .input_field_4 textarea{
+//     margin-left: 30px;
+//     width: 1040px;
+//     height: 130px;
+//     font-size: 18px;
+//     background: white;
+//     border: none;
+//     outline: none;
+//     padding: 7px 7px;
+//     border: 2px solid #e8e8e8;
+//     resize: vertical;
+// }
 .input_field ::placeholder {
     font-size: 1rem;
     color: #afb8bd;
@@ -109,7 +477,7 @@
     width: 200px;
     height: 50px;
     border: none;
-    background: #ff993a;
+    background: #1dd3fd;
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
@@ -118,7 +486,7 @@
     transition: 0.2s ease-out;
 }
 .input_field_submit input:hover {
-    background: #fba352;
+    background: #35daff;
 }
 
 .profile_img {
@@ -126,3 +494,11 @@
     // font-weight: 600;
     color: #78909c;
 }
+
+
+
+
+
+// .manager_list_job_div {
+    
+// }

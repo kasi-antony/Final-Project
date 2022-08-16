@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       interviewer.role = 'interviewer'
       if interviewer.save
         session[:current_user_id] = interviewer.id
-        redirect_to root_path
+        redirect_to '/homes/index'
       end
     end
   end
@@ -25,15 +25,17 @@ class UsersController < ApplicationController
     @manager = User.new
   end
 
-  def login; end
-
-  def create
+  def user_login
     user = User.find_by(email: params[:user][:email])
     if user&.authenticate(params[:user][:password])
       session[:current_user_id] = user.id
-      redirect_to '/manager_jobs/manager_home_page', success: "You have been logged in as #{user.name}"
+      if user.role == 'manager'
+        redirect_to '/manager_jobs/manager_home_page', success: "You have been logged in as #{user.name}"
+        # redirect_to '/users/login', danger: 'Invalid credentials...!'
+        render plain: 'failed'
+      end
     else
-      redirect_to '/users/login', danger: 'Invalid credentials...!'
+      render plain: 'failed'
     end
   end
 

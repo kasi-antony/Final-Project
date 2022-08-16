@@ -3,22 +3,20 @@
     <div class="logo_div">
         LOOKING <span class="logo_for_span">FOR</span>
     </div>
-    <div class="nav">
-       <span class="jobs_span"><a href="/user_jobs/user_list_jobs">Jobs</a></span>
-       <span class="recruiters_span"><a href="">Recruiters</a></span> 
-       <span class="companies_span"><a href="">Companies</a></span> 
-       <span class="services_span"><a href="">Services</a></span> 
-       <span class="more_span"><a href="">More</a></span>
-       <% unless @current_user %>
-         <span><a href="/users/login"> Sign up </a></span>
-         <% else %>
-         <span><%= @current_user.name if @current_user %></span>
-       <% end %>
+   
        
+    <div class="nav">
+       <span class="jobs-span"><a href="/user_jobs/user_list_jobs">Home</a></span>
+       <span class="jobs-span"><a href="/user_jobs/user_list_jobs">Jobs</a></span>
+       <span class="recruiters_span"><a href="">Applications</a></span> 
+       <span class="companies_span"><a href="">Interviews</a></span> 
+       <% unless @current_user %>
+         <span><a href="/homes/login"> Sign up </a></span>
+         <% else %>
+         <span class="profile_img"><%= @current_user.name if @current_user %></span>
+         <span class="services_span"><a href="/user/logout">Logout</a></span> 
+       <% end %>
     </div>
-    <%# <div class="profile_photo">
-    <%= image_tag('profile_image.png',class: "profile_photo") %>
-<%# </div> %>
 </div>
 <div class="content_div">
     <div class="catchy_lines"> 
@@ -29,6 +27,9 @@
         <p>LOREM EPSUM IS THE BEST WAY TO GETTING LOREM EPSUM IS THE BEST WAY TO GETTING
        LOREM EPSUM IS THE BEST WAY TO GETTING</p>
     </div>
+    <div class="browse-jobs">
+        <button><a href="/user_jobs/user_list_jobs">Browse Job</a></button>
+    </div>
     </div>
     <div class="image_content">
         <%= image_tag('cartoon_image-removebg-preview.png',class: "index_image") %>
@@ -37,7 +38,7 @@
 
 
 
-
+<%# 
 <div class="searchbar">
     <div class="searchbar_name">Company</div>
     <div class="searchbar_input">
@@ -45,7 +46,7 @@
     <input type="search" placeholder="Company name">
     <button>Search</button>
 </div>
-</div>
+</div> %>
 
 
 

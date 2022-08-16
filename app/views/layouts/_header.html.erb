@@ -1,18 +1,18 @@
-<% stylesheet_link_tag 'homes' %>
+<!-- <% stylesheet_link_tag 'homes' %>
 <div class="navbar_div">
     <div class="logo_div">
         LOOKING <span class="logo_for_span">FOR</span>
     </div>
     <div class="nav">
-       <span class="jobs_span"><a href="">Jobs</a></span>
+       <span class="jobs_span"><a href="/user_jobs/user_list_jobs">Jobs</a></span>
        <span class="recruiters_span"><a href="">Applications</a></span> 
        <span class="companies_span"><a href="">Interviews</a></span> 
        <span class="services_span"><a href="/user/logout">Logout</a></span> 
        <% unless @current_user %>
-         <span><a href="/users/login"> Sign up </a></span>
+         <span><a href="/users/login"> Login </a></span>
          <% else %>
          <span class="profile_img"><%= @current_user.name if @current_user %></span>
        <% end %>
     </div>
     
-</div>
+</div> -->

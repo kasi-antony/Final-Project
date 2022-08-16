@@ -1,5 +1,76 @@
+<div class="navbar_div">
+    <div class="logo_div">
+        LOOKING <span class="logo_for_span">FOR</span>
+    </div>
+    <div class="nav">
+       <span class="jobs_span"><a href="/manager_jobs/add_jobs">Home</a></span>
+       <span class="recruiters_span"><a href="">Applications</a></span> 
+       <span class="companies_span"><a href="">Interviews</a></span> 
+       <% unless @current_user %>
+         <span><a href="/homes/login"> Sign up </a></span>
+         <% else %>
+         <div class="manager-user-name-div">
+            <button class="manager-user-name"><%= @current_user.name if @current_user %></button>
+            <div class="logout-div">
+                <a href="/user/logout">Logout</a>
+            </div>
+          </div>
+       <% end %>
+    </div>
+    
+</div>
+
+
+
 <% unless  @jobs.length > 0 %>
-        <div class="input_div">   
+<div class="manager-home-page-div">
+    <div class="about_manager_div">
+        <div class="profile-img-div">
+            <%= image_tag('profile-img.png',class: "profile-img") %>
+        </div>
+        <div class="profile-content-div">
+        <div class="manager-profile name-div">Name:</div>
+        <i class="fa-solid fa-user"></i>
+        <span class="manager-profile-span name-span"><%= @current_user.name if @current_user %></span>
+        <div class="manager-profile mail-div">Email:</div>
+        <i class="fa-solid fa-envelope"></i>
+        <span class="manager-profile-span mail-span"><%= @current_user.email if @current_user%></span>
+        <div class="manager-profile contact-div">Contact:</div>
+        <i class="fa-solid fa-phone"></i>
+        <span class="manager-profile-span contact-span"><%= @current_user.contact_number if @current_user%></span>
+    </div>
+    </div>
+    <div class="manager-adding-job">
+        <div class="manager-job-input-div">
+            <form action="/manager_add_job" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+            <div class="input-field-manager-adding-job">
+            <input type="text" name="job_list[hiring_manager_name]" id="" placeholder="Name">
+        </div>
+        <div class="input-field-manager-adding-job">
+            <input type="text" name="job_list[eligibility]" id="" placeholder="Eligibility">
+        </div>
+        <div class="input-field-manager-adding-job">
+            <input type="text" name="job_list[job_title]" id="" placeholder="Job title">
+        </div>
+        <div class="input-field-manager-adding-job">
+            <input type="text" name="job_list[company_name]" id="" placeholder="Company name">
+        </div>
+        <div class="input-field-manager-adding-job">
+            <input type="text" name="job_list[qualification]" id="" placeholder="Qualification">
+        </div>
+        <div class="input-field-manager-adding-job">
+            <input type="text" name="job_list[country]" id="" placeholder="Country">
+        </div>
+            <textarea name="job_list[about_job]" id="" placeholder="About job" class="about-job"></textarea>
+        </div>
+        <div class="input_field_submit">
+            <input type="submit" value="Add Job">
+        </div>  
+    </form>
+    </div>
+    </div>
+        <!-- <div class="input_div">   
         <form action="/manager_add_job" method="post">
             <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
             <div class="main_input_field">
@@ -22,15 +93,100 @@
             <input type="submit" value="Add Job">
         </div>    
         </form>
-        </div>
+        </div> -->
 <% else %>
 
-        <%# Need to give Add Job Icon %>
+        <div class="dropdown">
+            <button class="manager-adding-job-icon" onclick="addjobpopup()"><i class="fa-solid fa-plus"></i></button>
+            <div class="manager-adding-add-job">
+              Add job
+            </div>
+          </div>
+        
 
-    <div class="input_div">   
+        <div class="manager-home-page-div1">
+        <div class="about_manager_div1">
+            <div class="profile-img-div1">
+                <%= image_tag('profile-img.png',class: "profile-img1") %>
+            </div>
+            <div class="profile-content-div1">
+            <div class="manager-profile1 name-div1">Name</div>
+            <!-- <i class="fa-solid fa-user"></i> -->
+            <span class="manager-profile-span1 name-span"><%= @current_user.name if @current_user %></span>
+            <div class="manager-profile1 mail-div">Email</div>
+            <!-- <i class="fa-solid fa-envelope"></i> -->
+            <span class="manager-profile-span1 mail-span"><%= @current_user.email if @current_user%></span>
+            <div class="manager-profile1 contact-div">Contact</div>
+            <!-- <i class="fa-solid fa-phone"></i> -->
+            <span class="manager-profile-span1 contact-span"><%= @current_user.contact_number if @current_user%></span>
+        </div>
+        </div>
+    </div>
+        
+            <div class="main_manager_job_list_div">
         <% @jobs.each do |job| %>
-            <%= job.hiring_manager_name %>
-            <%= job.job_title %>
+            <div class="manager_list_job_div"> 
+                <div> 
+            <div class="manager-list job-title"><%= job.job_title %></div>
+            <div class="manager-list job-company"><%= job.company_name %></div>
+            <div class="manager-list job-name"><%= job.hiring_manager_name %></div>
+        </div>
+        <div class="manager-list-delete-button">
+            <input type="submit" value="Delete">
+        </div>
+        </div>
         <% end %>
     </div>
 <% end %>
+
+
+<div class="popup" id="popup">
+    <div class="overlay">
+        <div class="cross-icon" onclick="cross()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <% if  @jobs.length > 0 %>
+            <form action="/manager_add_job" method="post">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+            <div class="input-field-manager-adding-job2">
+            <input type="text" name="job_list[hiring_manager_name]" id="" placeholder="Name">
+            <input type="text" name="job_list[eligibility]" id="" placeholder="Eligibility">
+        </div>
+        <div class="input-field-manager-adding-job2">
+            <input type="text" name="job_list[job_title]" id="" placeholder="Job title">
+            <input type="text" name="job_list[company_name]" id="" placeholder="Company name">
+        </div>
+        <div class="input-field-manager-adding-job2">
+            <input type="text" name="job_list[qualification]" id="" placeholder="Qualification">
+            <input type="text" name="job_list[country]" id="" placeholder="Country">
+        </div>
+        <div class="input-field-manager-adding-job-textarea">
+            <textarea name="job_list[about_job]" id="" placeholder="About job" class="about-job"></textarea>
+        </div>
+        <div class="input_field_submit">
+            <input type="submit" value="Add Job" onclick="addjobsubmit()">
+        </div>  
+    </form>
+    <% end %>
+    </div>
+</div>
+
+
+
+<script>
+    var x = document.getElementById("popup");
+
+    function addjobpopup(){
+        x.style.display = "block";
+    }
+    
+    function cross(){
+        x.style.display = "none";
+    }
+    
+    function addjobsubmit(){
+        x.style.display = "none";
+    }
+
+</script>
+    

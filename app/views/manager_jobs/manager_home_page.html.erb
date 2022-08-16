@@ -15,10 +15,22 @@
     </div>
     
 </div>
-
+<div class="manager-home-page-div">
+<div class="about_manager_div">
+    <div class="profile-img-div">
+        <%= image_tag('profile-img.png',class: "profile-img") %>
+    </div>
+    <div class="profile-content-div">
+    <div class="manager-profile name-div">Name:</div>
+    <span class="manager-profile-name-span"><%= @current_user.name if @current_user %></span>
+    <div class="manager-profile mail-div">Email:</div>
+    <span class="manager-profile-mail-span"><%= @current_user.email if @current_user%></span>
+</div>
+</div>
 <div class="about_manager_div">
     <span>Name:</span>
     <span class="profile_img"><%= @current_user.name if @current_user %></span>
     <div>Email:</div>
     <span><%= @current_user.email if @current_user%></span>
+</div>
 </div>
