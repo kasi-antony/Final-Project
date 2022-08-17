@@ -5,6 +5,7 @@
     position: relative;
     display: flex;
     top: 110px;
+    // background-color: #35daff;
 }
 .jobs_span a{
     color: #1dd3fd;
@@ -12,7 +13,7 @@
 
 .about_manager_div{
     background-color: #ffff;
-    position: relative;
+    position: fixed;
     box-shadow: 3px 3px 6px #e8e8e8,
     -3px -3px 6px rgb(246, 246, 246);
     width: 430px;
@@ -33,7 +34,7 @@
     display: flex;
     margin-bottom: 2%;
     flex-direction: column;
-    left: 14%;
+    left: 45%;
     border-radius: 25px;
 }
 .manager-profile {
@@ -381,6 +382,126 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+//APPLICANTS
+.main_manager_job_list_div1{
+    position: relative;
+    border-radius: 8px;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+    margin-bottom: 4%;
+    top: 150px;
+    left: 10%; 
+    width: 74.5%;
+    height: auto;
+    background-color: white;
+    box-shadow: 3px 3px 6px #e8e8e8,
+    -3px -3px 6px rgb(246, 246, 246);
+    border-radius: 25px;
+}
+.manager_list_job_div1 {
+    position: relative;
+    width: 88%;
+    height: 130px;
+    top: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    left: 5%;
+    border-radius: 15px;
+    background-color: #e8e8e8;
+}
+.applicants-list {
+    position: relative;
+    top: 28%;
+    left: 6%;
+    display: flex;
+}
+.applicants-name-div {
+    position: relative;
+    left: 20%;
+}
+.applicants-name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.applicants-name-head {
+    font-size: 0.9rem;
+    color: #78909c;
+}
+.applicants-exp-div {
+    position: relative;
+    left: 180%;
+}
+.applicants-exp-head {
+    font-size: 0.9rem;
+    color: #78909c;
+}
+.applicants-exp {
+    font-size: 2rem;
+    font-weight: 600;
+}
+.applicants-list-button {
+    position: relative;
+    top: 28%;
+    right: 4%;
+}
+.applicants-list-button input {
+    width: 260px;
+    height: 60px;
+    border: none;
+    background: #fb8719;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+.applicants-list-button input:hover {
+    background: #ef7a0c;
+}
+.main_manager_job_list_div2{
+    position: relative;
+    border-radius: 8px;
+    padding-top: 1.5%;
+    padding-bottom: 1%;
+    margin-bottom: 4%;
+    top: 150px;
+    left: 25%; 
+    width: 50%;
+    height: auto;
+    background-color: white;
+    box-shadow: 3px 3px 6px #e8e8e8,
+    -3px -3px 6px rgb(246, 246, 246);
+    border-radius: 25px;
+}
+.profile-img1 {
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    left: 28%;
+    width: 300px;
+    height: 300px;
+}
+.no-candidate-div {
+    position: relative;
+    margin-left: 32%;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3%;
+    color: #78909c;
+}
+
 //ADD JOBS PAGE
 .navbar_div {
     background-color: white;
@@ -474,7 +595,7 @@
     height: 130px;
 }
 .input_field_submit input {
-    width: 200px;
+    width: 300px;
     height: 50px;
     border: none;
     background: #1dd3fd;

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       manager.role = 'manager'
       if manager.save
         session[:current_user_id] = manager.id
-        redirect_to '/manager_jobs/manager_home_page'
+        redirect_to '/manager_jobs/add_jobs'
       end
     else
       interviewer = User.new(user_params(:interviewer))
@@ -30,9 +30,10 @@ class UsersController < ApplicationController
     if user&.authenticate(params[:user][:password])
       session[:current_user_id] = user.id
       if user.role == 'manager'
-        redirect_to '/manager_jobs/manager_home_page', success: "You have been logged in as #{user.name}"
+        redirect_to '/manager_jobs/add_jobs', success: "You have been logged in as #{user.name}"
         # redirect_to '/users/login', danger: 'Invalid credentials...!'
-        render plain: 'failed'
+      else
+        redirect_to '/homes/index'
       end
     else
       render plain: 'failed'

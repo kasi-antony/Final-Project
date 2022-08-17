@@ -1,0 +1,54 @@
+<div class="navbar_div">
+    <div class="logo_div">
+        LOOKING <span class="logo_for_span">FOR</span>
+    </div>
+    <div class="nav">
+       <span class=""><a href="/manager_jobs/add_jobs">Home</a></span>
+       <span class="jobs_span"><a href="">Applicants</a></span> 
+       <span class="companies_span"><a href="">Interviews</a></span> 
+       <% unless @current_user %>
+         <span><a href="/homes/login"> Sign up </a></span>
+         <% else %>
+         <div class="manager-user-name-div">
+            <button class="manager-user-name"><%= @current_user.name if @current_user %></button>
+            <div class="logout-div">
+                <a href="/user/logout">Logout</a>
+            </div>
+          </div>
+       <% end %>
+    </div>
+    
+</div>
+
+<!-- 
+<div class="main_manager_job_list_div2">
+    <%= image_tag('img-no-candidate.png',class: "profile-img1") %>
+    <div class="no-candidate-div">
+        NO CANDIDATE
+    </div>
+</div> -->
+
+<div class="main_manager_job_list_div1">
+    <% @applied_jobs.each do |job| %>
+        <div class="manager_list_job_div1"> 
+            
+           <div class="applicants-list">
+                <div class="applicants-name-div">
+                    <div class="applicants-name-head">Name</div>
+                    <!-- <% user = User.find(job.user_id) %> -->
+                    <div class="applicants-name"><%= user.name %></div>
+                </div>
+                <div class="applicants-exp-div">
+                    <div class="applicants-exp-head">Experience</div>
+                    <div class="applicants-exp"><%= job.experience %></div>
+                </div>
+           </div>
+        <div class="applicants-list-button">
+            <input type="submit" value="MORE DETAIL">
+        </div>
+
+ 
+
+</div>
+<% end %>
+</div>
