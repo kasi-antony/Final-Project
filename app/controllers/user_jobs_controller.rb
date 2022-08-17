@@ -28,10 +28,6 @@ class UserJobsController < ApplicationController
   @@job_id
   def user_home; end
 
-  def user_job_details
-    @job_id = job_id_returner
-    @job = Job.find(@job_id)
-  end
 
   def user_list_jobs
     @search_details = Job.all
@@ -44,11 +40,40 @@ class UserJobsController < ApplicationController
   end
 
   def job_id
-    @@job_id = params[:id]
-    redirect_to '/user_jobs/user_job_details'
+    @job = Job.find(params[:id])
+    render "user_job_details"
+  end
+
+  def applicants_form
+    @job = Job.find(params[:id])
+
   end
 
   def job_id_returner
     @@job_id
   end
+
+  def applicants
+    applicants = ApplicantsDetail.new
+  end
+
+  def applicants_details
+    applicants = ApplicantsDetail.new( applicants_details_params )
+    applicants.user_id = @current_user.id
+    applicants.job_id = params[:id]
+    if applicants.save
+      redirect_to "/homes/index"
+      else
+        render plain: "fialed"
+      end
+  end
+
+  private
+
+  def applicants_details_params
+    params.require(:applicants_details).permit(:applicant_name, :alternate_mobile, :address, :experience, :education )
+  end
+
+
+
 end

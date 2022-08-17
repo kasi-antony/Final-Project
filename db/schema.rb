@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,27 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_809_135_803) do
-  create_table 'jobs', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
-    t.string 'hiring_manager_name'
-    t.string 'eligibility'
-    t.string 'job_title'
-    t.string 'company_name'
-    t.text 'about_job'
-    t.string 'qualification'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.string 'country'
-    t.bigint 'user_id'
+ActiveRecord::Schema.define(version: 2022_08_17_043929) do
+
+  create_table "applicants_details", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "job_id"
+    t.string "applicant_name"
+    t.bigint "alternate_mobile"
+    t.string "address"
+    t.string "experience"
+    t.string "education"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'users', charset: 'utf8mb4', collation: 'utf8mb4_0900_ai_ci', force: :cascade do |t|
-    t.string 'name'
-    t.bigint 'contact_number'
-    t.string 'email'
-    t.string 'password_digest'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.string 'role'
+  create_table "jobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "hiring_manager_name"
+    t.string "eligibility"
+    t.string "job_title"
+    t.string "company_name"
+    t.text "about_job"
+    t.string "qualification"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "country"
+    t.bigint "user_id"
   end
+
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.bigint "contact_number"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "role"
+  end
+
 end

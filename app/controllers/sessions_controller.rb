@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   # def login
   #   @user = User.find_by(email: params[:user][:email])
   #   if @user&.authenticate(params[:user][:password])
-  #     session[:current_user_id] = @user.id
+#     session[:current_user_id] = @user.id
   #     # redirect_to root_path
   #   else
   #     # danger: "danger danger danger"

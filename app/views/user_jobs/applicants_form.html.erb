@@ -1,0 +1,42 @@
+<div class="navbar_div">
+    <div class="logo_div">
+        LOOKING <span class="logo_for_span">FOR</span>
+    </div>
+    <div class="nav">
+       <span class=""><a href="/manager_jobs/add_jobs">Home</a></span>
+       <span class="jobs_span"><a href="">Applicants</a></span> 
+       <span class="companies_span"><a href="">Interviews</a></span> 
+       <% unless @current_user %>
+         <span><a href="/homes/login"> Sign up </a></span>
+         <% else %>
+         <div class="manager-user-name-div">
+            <button class="manager-user-name"><%= @current_user.name if @current_user %></button>
+            <div class="logout-div">
+                <a href="/user/logout">Logout</a>
+            </div>
+          </div>
+       <% end %>
+    </div>
+    
+</div>
+
+<div style="margin-top: 10%;">
+
+    <form action="/applicants_details/<%= params[:id] %>" method="post">
+        <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>"
+    />
+    <input type="text" name="applicants_details[applicant_name]" placeholder="Applicant_name" required>
+    <input type="text" name="applicants_details[alternate_mobile]" placeholder="alternate mobile number" required>
+    <input type="text" name="applicants_details[address]" placeholder="address" required>
+    <input type="text" name="applicants_details[experience]" placeholder="experience" required>
+    <input type="text" name="applicants_details[education]" placeholder="education" required>
+    <input type="file">
+    <input type="submit" value="submit">
+ </form>
+
+    <%= @job.hiring_manager_name %>
+</div>
+
