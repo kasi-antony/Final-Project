@@ -6,26 +6,30 @@
    
        
     <div class="nav">
-       <span class="jobs-span"><a href="/user_jobs/user_list_jobs">Home</a></span>
-       <span class="jobs-span"><a href="/user_jobs/user_list_jobs">Jobs</a></span>
-       <span class="recruiters_span"><a href="">Applications</a></span> 
+       <span class="jobs_span"><a href="/user_jobs/user_list_jobs">Home</a></span>
+       <span class="jobs-span"><a href="/user_jobs/user_list_jobs">Jobs</a></span> 
        <span class="companies_span"><a href="">Interviews</a></span> 
        <% unless @current_user %>
          <span><a href="/homes/login"> Sign up </a></span>
          <% else %>
-         <span class="profile_img"><%= @current_user.name if @current_user %></span>
-         <span class="services_span"><a href="/user/logout">Logout</a></span> 
+         <div class="manager-user-name-div">
+            <button class="manager-user-name">
+                <%= @current_user.name if @current_user %>
+            </button>
+            <div class="logout-div">
+                <a href="/user/logout">Logout</a>
+            </div>
+        </div>
        <% end %>
     </div>
 </div>
 <div class="content_div">
     <div class="catchy_lines"> 
         <div class="heading_lines">
-            BEST WAY TO FIND A PERFECT JOB.
+            Searching For a JOB?
         </div>
         <div class="content_lines_div">
-        <p>LOREM EPSUM IS THE BEST WAY TO GETTING LOREM EPSUM IS THE BEST WAY TO GETTING
-       LOREM EPSUM IS THE BEST WAY TO GETTING</p>
+        <p>Then you are on a right place.Here you can find a neumarable number of jobs waiting for your applications.</p>
     </div>
     <div class="browse-jobs">
         <button><a href="/user_jobs/user_list_jobs">Browse Job</a></button>
@@ -64,8 +68,7 @@
             </span>
         </span>
         <div class="users_content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <p>We Want You. Apply And Work With Us</p>
         </div>
     </div>
     <div class="image_content2">
