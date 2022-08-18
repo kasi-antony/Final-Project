@@ -133,18 +133,29 @@
     left: 10%;
     border-radius: 25px;
 }
+.profile-img-div1 {
+    position: relative;
+    width: 40%;
+    // background: #1dd3fd;
+}
+.profile-img-div1 img {
+    position: absolute;
+    left: 8%;
+    width: 360px;
+    height: 400px;
+}
 .profile-img1 {
     position: relative;
     width: 390px;
-    height: 390px;
+    height: 300px;
     border-radius: 17px;
-    top: 7%;
+    top: 5%;
     left: 14%;
 }
 
 .profile-content-div1 {
     position: relative;
-    left: 14%;
+    left: 8%;
 }
 
 .manager-profile1 {
@@ -282,20 +293,37 @@
     position: relative;
     top: 30%;
     right: 10%;
-}
-.manager-list-delete-button input {
     width: 160px;
     height: 50px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #ff6262;
-    color: white;
     font-size: 1.3rem;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.2s ease-out;
 }
-.manager-list-delete-button input:hover {
+.manager-list-delete-button a{
+    text-decoration: none;
+    color: white;
+    // text-align: center;
+}
+// .manager-list-delete-button input {
+//     width: 160px;
+//     height: 50px;
+//     border: none;
+//     background: #ff6262;
+//     color: white;
+//     font-size: 1.3rem;
+//     font-weight: 600;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: 0.2s ease-out;
+// }
+.manager-list-delete-button:hover {
     background: #e15555;
 }
 
@@ -616,7 +644,9 @@
     color: #78909c;
 }
 
-
+.input_file_type {
+    margin-top: 30px;
+}
 
 
 

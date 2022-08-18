@@ -20,14 +20,14 @@
     
 </div>
 
-<!-- 
+<% if @applied_jobs.length == 0 %>
 <div class="main_manager_job_list_div2">
     <%= image_tag('img-no-candidate.png',class: "profile-img1") %>
     <div class="no-candidate-div">
         NO CANDIDATE
     </div>
-</div> -->
-
+</div>
+<% else %>
 <div class="main_manager_job_list_div1">
     <% @applied_jobs.each do |job| %>
         <div class="manager_list_job_div1"> 
@@ -52,3 +52,4 @@
 </div>
 <% end %>
 </div>
+<% end %>

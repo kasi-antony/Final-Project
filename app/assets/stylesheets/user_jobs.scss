@@ -191,6 +191,8 @@ body {
     transform: translate(6px,6px);
 }
 
+
+
 //ADD JOBS PAGE
 .navbar_div {
     background-color: white;
@@ -475,6 +477,279 @@ body {
     position: relative;
     width: 90%;
     height: 85%;
+    background: white;
+}
+
+.image_tag{
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 18%;
+    left: 5%;
+}
+
+.professional_image{
+    height: 613px;
+    left: -67px;
+    top: -33px;
+    position: absolute;
+    //  right: -43px;
+}
+
+// .applicants_form_div{
+//     // position: relative;
+//     // display: flex;
+//     // flex-direction: column;
+// }
+
+.applicant_name_p{
+    // background: red;
+    position: absolute;
+    left: 26%;
+    top: 20%;
+    width: 46%;
+    height: 121px;
+    font-size: 21px;
+    // font-weight: bold;
+}
+
+.applicant_name_p_input{
+    position: absolute;
+    left: 32%;
+    padding-left: 10px;
+    top: 36%;
+    height: 57px;
+    width: 46%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #e4e4e4;
+    border: none;
+    // border: 1px solid rgba(0, 0, 0, 0.533);
+}
+
+.applicant_p{
+    // background: red;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    font-size: 21px;
+}
+
+.applicant_mobile{
+    // background: red;
+    position: absolute;
+    left: 52%;
+    top: 20%;
+    width: 46%;
+    height: 121px;
+    font-size: 21px;
+    // font-weight: bold;
+}
+
+.applicant_mobile_input{
+    // border: 1px solid rgba(0, 0, 0, 0.533);
+    position: absolute;
+    left: 32%;
+    padding-left: 10px;
+    background-color: #e4e4e4;
+    top: 36%;
+    // top: 36%;
+    height: 57px;
+    // height: 41px;
+    border: none;
+    width: 46%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    // border: 1px solid;
+}
+
+.applicant_mobile_number{
+    // background: red;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    font-size: 21px;
+}
+
+.applicant_experience_div{
+    position: absolute;
+    left: 26%;
+    top: 51%;
+    width: 46%;
+    height: 121px;
+    font-size: 21px;
+}
+
+.applicant_experience_input{
+    // border: 1px solid rgba(0, 0, 0, 0.533);
+    position: absolute;
+    left: 32%;
+    padding-left: 10px;
+    background-color: #e4e4e4;
+    top: 36%;
+    height: 57px;
+    border: none;
+    width: 46%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    // border: 1px solid;
+}
+
+.applicant_experience{
+    // background: red;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    font-size: 21px;
+}
+
+.applicant_address_div{
+   
+    position: absolute;
+    left: 13.5%;
+    top: 35%;
+    width: 84.8%;
+    height: 121px;
+    font-size: 21px;
+
+}
+
+.applicant_address_input{
+    // border: 1px solid rgba(0, 0, 0, 0.533);
+    background-color: #e4e4e4;
+    position: absolute;
+    left: 32%;
+    padding-left: 10px;
+    top: 36%;
+    height: 57px;
+    width: 56%;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    // border: 1px solid;
+}
+
+.applicant_address{
+    // background: red;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    font-size: 21px;
+}
+
+.applicant_education_div{
+    // background: red;
+    position: absolute;
+    left: 52%;
+    top: 51%;
+    width: 46%;
+    height: 121px;
+    font-size: 21px;
+    // font-weight: bold;
+}
+
+.applicant_education_input{
+    // border: 1px solid rgba(0, 0, 0, 0.533);
+    background-color: #e4e4e4;
+    position: absolute;
+    left: 32%;
+    padding-left: 10px;
+    border: none;
+    top: 36%;
+    height: 57px;
+    width: 46%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    // border: 1px solid;
+}
+
+.applicant_education{
+    // background: red;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    font-size: 21px;
+}
+
+.applicant_file_div{
+   
+    position: absolute;
+    left: 13.5%;
+    top: 67%;
+    width: 84.8%;
+    height: 121px;
+    font-size: 21px;
+
+}
+
+.applicant_file_input{
+    // border: 1px solid rgba(0, 0, 0, 0.533);
+    background-color: #e4e4e4;
+
+    position: absolute;
+    left: 32%;
+    padding-left: 275px;
+    top: 36%;
+    padding-top: 14px;
+    height: 41px;
+    width: 35.6%;
+    font-size: 18px;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    // border: 1px solid;
+}
+
+.applicant_file{
+    // background: white;
+    position: absolute;
+    left: 32%;
+    top: 22%;
+    font-size: 21px;
+}
+
+
+.button_submit {
+    background-color: #c2f4fb;
+  border-radius: 100px;
+  box-shadow: rgba(44, 151, 187, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 168, 187, 0.15) 0 1px 2px,rgba(44, 165, 187, 0.15) 0 2px 4px,rgba(44, 173, 187, 0.15) 0 4px 8px,rgba(44, 137, 187, 0.15) 0 8px 16px,rgba(44, 161, 187, 0.15) 0 16px 32px;
+  color: rgb(0, 113, 128);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  position: absolute;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  top: 85%;
+  right: 31%;
+  height: 53px;
+  width: 175px;
+}
+
+.button_submit:hover {
+  box-shadow: rgba(44, 163, 187, 0.35) 0 -25px 18px -14px inset,rgba(44, 154, 187, 0.25) 0 1px 2px,rgba(44, 170, 187, 0.25) 0 2px 4px,rgba(44, 146, 187, 0.25) 0 4px 8px,rgba(44, 170, 187, 0.25) 0 8px 16px,rgba(44, 149, 187, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+}
+.white_div{
+    border-radius: 20px;
+    position: absolute;
+    top: 19%;
+    right: 7%;
+    height: 77%;
+    width: 56%;
     background: white;
 }
 

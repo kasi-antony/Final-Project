@@ -107,8 +107,23 @@
         <div class="manager-home-page-div1">
         <div class="about_manager_div1">
             <div class="profile-img-div1">
-                <%= image_tag('profile-img.png',class: "profile-img1") %>
+                <%= image_tag('profile-img.png',class: "profile-img1" ,id: "chosen-image") %>
             </div>
+<!-- 
+            <script>
+                var uploadbutton = document.getElementById("upload-button");
+                var chosenimage = document.getElementById("chosen-image");
+
+
+                uploadbutton.onchange = () => {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(uploadbutton.files[0]);
+                    reader.onload = () => {
+                        chosenimage.setAttribute("src",reader.result);
+                    }
+                }
+            </script> -->
+
             <div class="profile-content-div1">
             <div class="manager-profile1 name-div1">Name</div>
             <!-- <i class="fa-solid fa-user"></i> -->
@@ -132,7 +147,8 @@
             <div class="manager-list job-name"><%= job.hiring_manager_name %></div>
         </div>
         <div class="manager-list-delete-button">
-            <input type="submit" value="Delete">
+            <%= link_to "Delete Job", "/remove_job/#{job.id}" ,method: :delete, data: {confirm:
+                'Are you sure ?'} %>
         </div>
         </div>
         <% end %>
