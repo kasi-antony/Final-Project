@@ -23,15 +23,21 @@
     color: #fb8719;
 }
 .nav {
-    // margin-left: 20px;
+    margin-left: 25%;
     font-size: 16px;
     margin-top: 35px;
+    width: 47%;
 }
 .nav a{
     text-decoration: none;
     color: #78909c;
     padding: 20px;
+    // padding-left: 5%;
 
+}
+
+.nav span{
+    padding-left: 5%;
 }
 .nav a:hover {
     color: #1dd3fd;
@@ -53,6 +59,7 @@
     font-size: 1.8rem;
     border: none;
     outline: none;
+    margin-top: 5%;
     border-radius: 10px;
     cursor: pointer;
     color: white;
@@ -87,8 +94,9 @@
     z-index: 5;
 }
 .content_div {
+    height: auto;
     display: flex;
-    margin-top: 70px;
+    margin-top: 115px;
     margin-left: 120px;
 }
 .catchy_lines {
@@ -103,7 +111,7 @@
 }
 .image_content {
     margin-top: -35px;
-    margin-left: 40px;
+    margin-left: 150px;
     width: 330px;
     height: 330px;
     border-radius: 50%;
@@ -117,13 +125,15 @@
 }
 .content_lines_div {
     color: #78909c;
+    font-weight: bold;
     width: 650px;
     font-size: 20px;
     margin-top: 40px;
-    line-height: 25px;
+    line-height: 32px;
     letter-spacing: 1px;
+    text-align: justify;
     word-spacing: 5px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 .image_content2 {
     margin-top: 20px;
@@ -235,7 +245,7 @@
     border-radius: 100%;
 }
 .circle_div2 {
-    position: absolute;
+    // position: absolute;
     top: 430px;
     left: -55px;
     position: fixed;
@@ -390,7 +400,7 @@
     border-radius: 100%;
 }
 .circle_div_down_in_login_page{
-    position: absolute;
+    // position: absolute;
     top: 430px;
     left: -55px;
     position: fixed;

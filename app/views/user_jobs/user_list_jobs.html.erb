@@ -10,7 +10,9 @@
       value="<%= form_authenticity_token %>"
       />
       <input type="search" class="search-div-user-list" name="search" id="">
-      <input type="submit" class="search-button-user-list" name="" id="">
+     
+      <input type="submit" class="search-button-user-list" name="" >
+    
     </form>
   </div>
     <div class="nav">
@@ -23,7 +25,10 @@
          <span class="profile_img"><%= @current_user.name if @current_user %></span>
        <% end %> 
     </div>
-    
+    <!-- <button id="search-btn">
+      submit
+  </button> -->
+
 </div>
 <!-- 
 <div class="all_jobs_div">
@@ -185,3 +190,17 @@
 </div>
 </div>
 <% end %> -->
+
+
+<script>
+
+//   const searchbttn = document.getElementById("search-btn");
+//   console.log(searchbttn);
+//   searchbttn.addEventListener("click", function () {
+//   setTimeout (function () {
+//     alert("how is it going");
+//     console.log(alert);
+//   },2000);
+// });
+
+</script>
