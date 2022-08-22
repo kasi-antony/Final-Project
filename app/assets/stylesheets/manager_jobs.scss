@@ -460,6 +460,7 @@
 .applicants-name-div {
     position: relative;
     left: 20%;
+    // background-color: #1dd3fd;
 }
 .applicants-name {
     font-size: 2rem;
@@ -470,8 +471,11 @@
     color: #78909c;
 }
 .applicants-exp-div {
-    position: relative;
-    left: 180%;
+    position: absolute;
+    left: 150%;
+    width: 80%;
+    height: auto;
+    // background-color: #e15555;
 }
 .applicants-exp-head {
     font-size: 0.9rem;

@@ -10,7 +10,7 @@
             </div>
             <div class="form_feilds">
                 <form action="/users/login" method="post">
-                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
                     <div class="input">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" placeholder="Email" name="user[email]">
@@ -20,7 +20,7 @@
                         <input type="password" placeholder="Password" name="user[password]">
                     </div>
                     <div class="submit_button">
-                        <button class="sub" type="submit">continue</button>
+                        <button class="sub" type="submit">Sign in</button>
                     </div>
                 </form>
             </div>
