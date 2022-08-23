@@ -37,7 +37,9 @@ Things you may want to cover:
 ### What is Looking for ?
    <p> Looking for is an Job seeker application,in which manager can add jobs and user can apply for the same.users of my application are manager and interviewee.  </p>
 
-
+### Gems used:
+   * bcrypt
+   * Rubocop
 ### Features of Looking For :
 #### * Sign Up(Completed)
    * All input fields are required.

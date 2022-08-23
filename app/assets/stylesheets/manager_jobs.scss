@@ -59,7 +59,7 @@
 }
 .profile-content-div {
     position: relative;
-    top: 63%;
+    top: 61%;
     left: 10%;
 }
 .profile-img {
@@ -218,14 +218,17 @@
   .manager-user-name-div {
     position: relative;
     display: inline-block;
+    margin-left: 8%;
   }
   .manager-user-name {
+    text-transform: capitalize;
     font-size: 1.3rem;
     background: none;
     border: none;
     outline: none;
     color: #78909c;
     cursor: pointer;
+    font-weight: bold;
   }
   .logout-div {
     position: absolute;
@@ -250,7 +253,7 @@
 
 .main_manager_job_list_div{
     position: relative;
-    border-radius: 8px;
+    // border-radius: 8px;
     padding-top: 3%;
     padding-bottom: 1%;
     margin-bottom: 4%;
@@ -399,7 +402,7 @@
     background: white;
     width: 110px;
     height: 50px;
-    display: flex;
+    // display: flex;
     box-shadow: 0 0 2px 2px rgba(234, 234, 234, 0.641);
     justify-content: center;
     align-items: center;
@@ -423,7 +426,7 @@
 //APPLICANTS
 .main_manager_job_list_div1{
     position: relative;
-    border-radius: 8px;
+    // border-radius: 8px;
     padding-top: 1.5%;
     padding-bottom: 1%;
     margin-bottom: 4%;
@@ -457,6 +460,7 @@
 .applicants-name-div {
     position: relative;
     left: 20%;
+    // background-color: #1dd3fd;
 }
 .applicants-name {
     font-size: 2rem;
@@ -467,8 +471,11 @@
     color: #78909c;
 }
 .applicants-exp-div {
-    position: relative;
-    left: 180%;
+    position: absolute;
+    left: 150%;
+    width: 80%;
+    height: auto;
+    // background-color: #e15555;
 }
 .applicants-exp-head {
     font-size: 0.9rem;
@@ -500,7 +507,7 @@
 }
 .main_manager_job_list_div2{
     position: relative;
-    border-radius: 8px;
+    // border-radius: 8px;
     padding-top: 1.5%;
     padding-bottom: 1%;
     margin-bottom: 4%;
@@ -588,7 +595,7 @@
     padding-left: 7px;
     margin-left: 30px;
     margin-bottom: 30px;
-    border: 2px solid #e8e8e8;
+    // border: 2px solid #e8e8e8;
 }
 // .input_div {
 //     margin-top: 8%;
